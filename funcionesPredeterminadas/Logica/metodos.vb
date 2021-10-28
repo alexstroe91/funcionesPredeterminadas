@@ -35,18 +35,10 @@
             'paso la cadena caracter por caracter a un array de carracteres
             Dim miArray As Char() = .txtFrase.Text.ToCharArray
             Dim encontrada As Boolean = False
-            Dim contadorMayus As Integer = 0
-            Dim contadorMinus As Integer = 0
 
             For i As Integer = 0 To miArray.GetUpperBound(0) Step +1
-                'compruebo caracter a caracter si es mayuscula y si es asi al contador y +1 y sino +1 a contadorMinus
-                If Char.IsUpper(miArray(i)) Then
-                    contadorMayus += 1
-                Else
-                    contadorMinus += 1
-                End If
                 ' compruebo letra a letra si es una A y si lo es, el booleano de encontrado pasa a true para que no se siga comprobando
-                If (miArray(i) = "A" OrElse miArray(i) = "a") AndAlso (Not encontrada) Then
+                If (miArray(i) = "A") AndAlso (Not encontrada) Then
                     .lblPosPrimeraA.Text = CType(i + 1, String)
                     encontrada = True
                 ElseIf Not encontrada Then
@@ -54,15 +46,13 @@
                 End If
             Next
 
-            'voy letra por letra comprobando si es mayuscula o minuscula y voy sumando a su contador respectivo
-            If Char.IsUpper(.txtFrase.Text.First()) Then
-                .lblSoloPrimeraMayus.Text = "Sí"
-            Else
-                .lblSoloPrimeraMayus.Text = "No"
-            End If
+            'Transoformo el texto que teng en .txtFrase a Mayuscula o Minuscula, lo que necesite
+            'repectivamente
+            .lblMayusculas.Text = Strings.UCase(.txtFrase.Text)
+            .lblMinusculas.Text = Strings.LCase(.txtFrase.Text)
 
-            .lblMayusculas.Text = CType(contadorMayus, String)
-            .lblMinusculas.Text = CType(contadorMinus, String)
+            'Convierto la primera letra de cada palabra a mayusculas con ese metodo.
+            .lblSoloPrimeraMayus.Text = StrConv(.txtFrase.Text, vbProperCase)
 
         End With
 

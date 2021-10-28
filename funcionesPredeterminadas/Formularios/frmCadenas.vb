@@ -13,6 +13,7 @@
     End Sub
 
     Private Sub btnMuestra_Click(sender As Object, e As EventArgs) Handles btnMuestra.Click
+        'Llamada al metodo de mostrar informacion en el formulario de cadenas.
         metodos.mostrarInfoCadenas(Me)
     End Sub
 End Class
