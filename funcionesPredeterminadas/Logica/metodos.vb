@@ -32,18 +32,25 @@
                 .lblSegundoAlSextoCaracter.Text = "-"
             End If
 
-            'paso la cadena caracter por caracter a un array de carracteres, y despues recorro todo el array y recojo
-            'la posicion de la primera letra A
+            'paso la cadena caracter por caracter a un array de carracteres
             Dim miArray As Char() = .txtFrase.Text.ToCharArray
             Dim encontrada As Boolean = False
+            Dim contadorMayus As Integer = 0
             For i As Integer = 0 To miArray.GetUpperBound(0)
-                If miArray(i) = "A" Or miArray(i) = "a" And Not encontrada Then
+                'compruebo caracter a caracter si es mayuscula y si es asi al contador le sumo 1
+                If Char.IsUpper(miArray(i)) Then
+                    contadorMayus += 1
+                End If
+
+                If (miArray(i) = "A" OrElse miArray(i) = "a") AndAlso (Not encontrada) Then
                     .lblPosPrimeraA.Text = CType(i + 1, String)
                     encontrada = True
                 ElseIf Not encontrada Then
                     .lblPosPrimeraA.Text = "-"
                 End If
             Next
+
+            .lblMayusculas.Text = CType(contadorMayus, String)
 
         End With
 
