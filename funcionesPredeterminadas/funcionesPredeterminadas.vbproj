@@ -125,6 +125,9 @@
     <EmbeddedResource Include="Formularios\frmCadenas.resx">
       <DependentUpon>frmCadenas.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmNumeros.resx">
+      <DependentUpon>frmNumeros.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
