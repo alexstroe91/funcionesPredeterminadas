@@ -13,6 +13,6 @@
     End Sub
 
     Private Sub btnMuestra_Click(sender As Object, e As EventArgs) Handles btnMuestra.Click
-        metodos.mostrarInfo(Me)
+        metodos.mostrarInfoCadenas(Me)
     End Sub
 End Class

@@ -15,7 +15,7 @@
     End Sub
 
 
-    Public Sub mostrarInfo(frm As frmCadenas)
+    Public Sub mostrarInfoCadenas(frm As frmCadenas)
         With frm
             'recojo la longitud del texto
             .lblLongitud.Text = CType(.txtFrase.TextLength(), String)
@@ -27,7 +27,7 @@
             'compruebo si la longitud es mayor que 6 y despues recojo los valores que hayan entre el 2ndo y 6to caracter
             'sino, pongo un guión
             If .txtFrase.TextLength > 6 Then
-                .lblSegundoAlSextoCaracter.Text = .txtFrase.Text.Substring(2, 5)
+                .lblSegundoAlSextoCaracter.Text = .txtFrase.Text.Substring(1, 5)
             Else
                 .lblSegundoAlSextoCaracter.Text = "-"
             End If
