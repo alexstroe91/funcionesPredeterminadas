@@ -105,7 +105,7 @@ Partial Class frmFechas
         '
         Me.lblDiasFaltan.AutoSize = True
         Me.lblDiasFaltan.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblDiasFaltan.Location = New System.Drawing.Point(201, 243)
+        Me.lblDiasFaltan.Location = New System.Drawing.Point(201, 253)
         Me.lblDiasFaltan.Name = "lblDiasFaltan"
         Me.lblDiasFaltan.Size = New System.Drawing.Size(0, 13)
         Me.lblDiasFaltan.TabIndex = 13
