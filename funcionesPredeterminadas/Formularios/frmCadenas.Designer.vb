@@ -94,7 +94,7 @@ Partial Class frmCadenas
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.GroupBox1.Controls.Add(Me.lblSoloPrimeraMayus)
         Me.GroupBox1.Controls.Add(Me.lblMinusculas)
         Me.GroupBox1.Controls.Add(Me.lblMayusculas)

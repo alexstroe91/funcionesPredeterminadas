@@ -50,7 +50,7 @@ Partial Class frmFechas
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.GroupBox1.BackColor = System.Drawing.Color.Maroon
         Me.GroupBox1.Controls.Add(Me.lblFechaAct)
         Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.lblEsteAno)

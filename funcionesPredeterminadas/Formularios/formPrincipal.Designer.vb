@@ -31,27 +31,31 @@ Partial Class formPrincipal
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.Navy
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuCadena, Me.mnuNumeros, Me.mnuFechas})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(312, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(232, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'mnuCadena
         '
+        Me.mnuCadena.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.mnuCadena.Name = "mnuCadena"
         Me.mnuCadena.Size = New System.Drawing.Size(72, 20)
         Me.mnuCadena.Text = "&CADENAS"
         '
         'mnuNumeros
         '
+        Me.mnuNumeros.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.mnuNumeros.Name = "mnuNumeros"
         Me.mnuNumeros.Size = New System.Drawing.Size(75, 20)
         Me.mnuNumeros.Text = "NUMEROS"
         '
         'mnuFechas
         '
+        Me.mnuFechas.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.mnuFechas.Name = "mnuFechas"
         Me.mnuFechas.Size = New System.Drawing.Size(62, 20)
         Me.mnuFechas.Text = "FECHAS"
@@ -60,8 +64,10 @@ Partial Class formPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(312, 265)
+        Me.BackColor = System.Drawing.Color.SlateGray
+        Me.ClientSize = New System.Drawing.Size(232, 198)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "formPrincipal"
         Me.Text = "Form1"
