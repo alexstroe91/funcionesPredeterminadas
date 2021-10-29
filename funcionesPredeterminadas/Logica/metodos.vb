@@ -1,4 +1,9 @@
 ﻿Public Class metodos
+
+    '---------------------------------------------------------------------
+    '------------------------------ CADENAS -------------------------------
+    '---------------------------------------------------------------------
+
     Public Sub limpiarDatosCadenas(frm As frmCadenas)
         With frm
             'limpio cada textbox y cada label para que este vacio
@@ -59,6 +64,9 @@
 
     End Sub
 
+    '---------------------------------------------------------------------
+    '------------------------------ NUMEROS -------------------------------
+    '---------------------------------------------------------------------
     Public Sub limpiarDatosNumeros(frm As frmNumeros)
         With frm
             'limpio cada textbox y cada label para que este vacio
@@ -113,7 +121,60 @@
                 .lblValorHexadecimal.Text = "No existe el valor hexadecimal de un nr negativo."
             End If
 
+        End With
+    End Sub
 
+    '---------------------------------------------------------------------
+    '------------------------------ FECHAS -------------------------------
+    '---------------------------------------------------------------------
+    Public Sub mostrarDatosFechas(frm As frmFechas)
+
+        'Creo un array para despues usarlo en el label de mes ingresado
+        Dim arrayMeses() As String = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"}
+
+        With frm
+
+            'recojo  el dia de la fecha indicada
+            .lblDiaDeLaSemana.Text = CType(.dteFecha.Value.Day, String)
+
+            ' recojo el dia de la semana con el metodo de abajo y con el case le doy valor
+            Select Case CInt(.dteFecha.Value.DayOfWeek)
+                Case 1
+                    .lblDiaDeLaSemana.Text = "Lunes"
+                Case 2
+                    .lblDiaDeLaSemana.Text = "Martes"
+                Case 3
+                    .lblDiaDeLaSemana.Text = "Miercoles"
+                Case 4
+                    .lblDiaDeLaSemana.Text = "Jueves"
+                Case 5
+                    .lblDiaDeLaSemana.Text = "Viernes"
+                Case 6
+                    .lblDiaDeLaSemana.Text = "Sabado"
+                Case 7
+                    .lblDiaDeLaSemana.Text = "Domingo"
+            End Select
+
+            ' recojo el dia ingresado de la semana 
+            .lblDiaIngresado.Text = CType(.dteFecha.Value.Day, String)
+
+            'recojo el mes ingresado y compruebo la posicion del array y le doy valor
+            .lblMesIngresado.Text = CType(arrayMeses(.dteFecha.Value.Month - 1), String)
+
+            'recojo de la fecha indicada el año
+            .lblAnoIngresado.Text = CType(.dteFecha.Value.Year, String)
+
+            'recojo la fecha de ingreso que es la fecha indicada
+            .lblFechaIngreso.Text = CType(.dteFecha.Value.Date, String)
+
+            'recojo la fecha actual con el metodo
+            .lblFechaAct.Text = CStr(Now.Date & " o " & .lblDiaDeLaSemana.Text & ", " & .lblDiaIngresado.Text & " de " & .lblMesIngresado.Text & " de " & .lblAnoIngresado.Text)
+
+            'resto los dias del año con el dia actual
+            .lblDiasFaltan.Text = CStr(365 - Date.Now.DayOfYear)
+
+            'muestro infromacion de este año
+            .lblEsteAno.Text = CStr(.txtNombre.Text & " cumple " & (Date.Now.Year - .dteFecha.Value.Year) & " años")
         End With
     End Sub
 
