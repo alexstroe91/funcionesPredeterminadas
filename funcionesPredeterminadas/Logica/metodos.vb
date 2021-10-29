@@ -175,6 +175,7 @@
 
             'muestro infromacion de este año
             .lblEsteAno.Text = CStr(.txtNombre.Text & " cumple " & (Date.Now.Year - .dteFecha.Value.Year) & " años")
+
         End With
     End Sub
 
