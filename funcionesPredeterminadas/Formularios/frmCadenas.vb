@@ -4,7 +4,7 @@
 
     Private Sub btnLimpia_Click(sender As Object, e As EventArgs) Handles btnLimpia.Click
         'metodo que al pulsar el boton de limpiar, te borra todo el contenido de la informacion
-        metodos.limpiarDatos(Me)
+        metodos.limpiarDatosCadenas(Me)
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click

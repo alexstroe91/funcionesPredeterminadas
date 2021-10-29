@@ -1,6 +1,7 @@
 ﻿Public Class metodos
-    Public Sub limpiarDatos(frm As frmCadenas)
+    Public Sub limpiarDatosCadenas(frm As frmCadenas)
         With frm
+            'limpio cada textbox y cada label para que este vacio
             .txtFrase.Text = ""
             .lblLongitud.Text = ""
             .lblPrimerCaracter.Text = ""
@@ -57,4 +58,63 @@
         End With
 
     End Sub
+
+    Public Sub limpiarDatosNumeros(frm As frmNumeros)
+        With frm
+            'limpio cada textbox y cada label para que este vacio
+            .numNumeros.Value = 0
+            .lblParteEntera.Text = ""
+            .lblParteDecimal.Text = ""
+            .lblValorAbsoluto.Text = ""
+            .lblRaiz.Text = ""
+            .lblSignoDelNumero.Text = ""
+            .lblValorOctal.Text = ""
+            .lblValorHexadecimal.Text = ""
+        End With
+    End Sub
+
+    Public Sub mostrarInfoNumeros(frm As frmNumeros)
+        With frm
+            'con el metodo truncate, saco la parte entera de un nr
+            .lblParteEntera.Text = CType(Math.Truncate(.numNumeros.Value), String)
+
+            'Le resto al nr la parte entera y se me queda la parte decimal
+            .lblParteDecimal.Text = CType(Math.Abs((.numNumeros.Value) - Math.Truncate(.numNumeros.Value)), String)
+
+            'con el metodo abs saco el valor absoluto del nr introducido
+            .lblValorAbsoluto.Text = CType(Math.Abs(.numNumeros.Value), String)
+
+            'compruebo si el nr es mayor que 0 si es asi hago la raiz cuadrada y sino muestro un mensaje informativo
+            If .numNumeros.Value > 0 Then
+                .lblRaiz.Text = CType(Math.Sqrt(.numNumeros.Value), String)
+            Else
+                .lblRaiz.Text = "No existe la raiz cuadrada de un nr negativo."
+            End If
+
+            'compruebo si el nr es mayor que 0 y muestro el mensaje informativo
+            If .numNumeros.Value >= 0 Then
+                .lblSignoDelNumero.Text = "Positivo"
+            Else
+                .lblSignoDelNumero.Text = "Negativo"
+            End If
+
+            'si el nr es mayor que 0 saco el octal con el metodo Oct, sino muestro un mensaje
+            If .numNumeros.Value > 0 Then
+                .lblValorOctal.Text = Conversion.Oct(.numNumeros.Value)
+            Else
+                .lblValorOctal.Text = "No existe el valor octal de un nr negativo."
+            End If
+
+
+            'si el nr es mayor que 0 saco el hexadecimal con el metodo Oct, sino muestro un mensaje
+            If .numNumeros.Value > 0 Then
+                .lblValorHexadecimal.Text = Conversion.Hex(.numNumeros.Value)
+            Else
+                .lblValorHexadecimal.Text = "No existe el valor hexadecimal de un nr negativo."
+            End If
+
+
+        End With
+    End Sub
+
 End Class
