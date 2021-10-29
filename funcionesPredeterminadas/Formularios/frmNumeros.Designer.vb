@@ -23,15 +23,13 @@ Partial Class frmNumeros
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.lblSoloPrimeraMayus = New System.Windows.Forms.Label()
-        Me.lblMinusculas = New System.Windows.Forms.Label()
-        Me.lblMayusculas = New System.Windows.Forms.Label()
-        Me.lblPosPrimeraA = New System.Windows.Forms.Label()
-        Me.lblSegundoAlSextoCaracter = New System.Windows.Forms.Label()
+        Me.lblValorHexadecimal = New System.Windows.Forms.Label()
+        Me.lblValorOctal = New System.Windows.Forms.Label()
+        Me.lblSignoDelNumero = New System.Windows.Forms.Label()
+        Me.lblRaiz = New System.Windows.Forms.Label()
         Me.lblValorAbsoluto = New System.Windows.Forms.Label()
         Me.lblParteDecimal = New System.Windows.Forms.Label()
         Me.lblParteEntera = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -39,26 +37,25 @@ Partial Class frmNumeros
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtNumero = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.btnCalcular = New System.Windows.Forms.Button()
+        Me.numNumeros = New System.Windows.Forms.NumericUpDown()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.numNumeros, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.GroupBox1.Controls.Add(Me.lblSoloPrimeraMayus)
-        Me.GroupBox1.Controls.Add(Me.lblMinusculas)
-        Me.GroupBox1.Controls.Add(Me.lblMayusculas)
-        Me.GroupBox1.Controls.Add(Me.lblPosPrimeraA)
-        Me.GroupBox1.Controls.Add(Me.lblSegundoAlSextoCaracter)
+        Me.GroupBox1.Controls.Add(Me.lblValorHexadecimal)
+        Me.GroupBox1.Controls.Add(Me.lblValorOctal)
+        Me.GroupBox1.Controls.Add(Me.lblSignoDelNumero)
+        Me.GroupBox1.Controls.Add(Me.lblRaiz)
         Me.GroupBox1.Controls.Add(Me.lblValorAbsoluto)
         Me.GroupBox1.Controls.Add(Me.lblParteDecimal)
         Me.GroupBox1.Controls.Add(Me.lblParteEntera)
-        Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Label8)
         Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.Label6)
@@ -68,54 +65,45 @@ Partial Class frmNumeros
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(24, 98)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(431, 340)
+        Me.GroupBox1.Size = New System.Drawing.Size(431, 296)
         Me.GroupBox1.TabIndex = 11
         Me.GroupBox1.TabStop = False
         '
-        'lblSoloPrimeraMayus
+        'lblValorHexadecimal
         '
-        Me.lblSoloPrimeraMayus.AutoSize = True
-        Me.lblSoloPrimeraMayus.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblSoloPrimeraMayus.Location = New System.Drawing.Point(175, 308)
-        Me.lblSoloPrimeraMayus.Name = "lblSoloPrimeraMayus"
-        Me.lblSoloPrimeraMayus.Size = New System.Drawing.Size(0, 13)
-        Me.lblSoloPrimeraMayus.TabIndex = 15
+        Me.lblValorHexadecimal.AutoSize = True
+        Me.lblValorHexadecimal.ForeColor = System.Drawing.SystemColors.Window
+        Me.lblValorHexadecimal.Location = New System.Drawing.Point(175, 262)
+        Me.lblValorHexadecimal.Name = "lblValorHexadecimal"
+        Me.lblValorHexadecimal.Size = New System.Drawing.Size(0, 13)
+        Me.lblValorHexadecimal.TabIndex = 14
         '
-        'lblMinusculas
+        'lblValorOctal
         '
-        Me.lblMinusculas.AutoSize = True
-        Me.lblMinusculas.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblMinusculas.Location = New System.Drawing.Point(175, 262)
-        Me.lblMinusculas.Name = "lblMinusculas"
-        Me.lblMinusculas.Size = New System.Drawing.Size(0, 13)
-        Me.lblMinusculas.TabIndex = 14
+        Me.lblValorOctal.AutoSize = True
+        Me.lblValorOctal.ForeColor = System.Drawing.SystemColors.Window
+        Me.lblValorOctal.Location = New System.Drawing.Point(175, 222)
+        Me.lblValorOctal.Name = "lblValorOctal"
+        Me.lblValorOctal.Size = New System.Drawing.Size(0, 13)
+        Me.lblValorOctal.TabIndex = 13
         '
-        'lblMayusculas
+        'lblSignoDelNumero
         '
-        Me.lblMayusculas.AutoSize = True
-        Me.lblMayusculas.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblMayusculas.Location = New System.Drawing.Point(175, 222)
-        Me.lblMayusculas.Name = "lblMayusculas"
-        Me.lblMayusculas.Size = New System.Drawing.Size(0, 13)
-        Me.lblMayusculas.TabIndex = 13
+        Me.lblSignoDelNumero.AutoSize = True
+        Me.lblSignoDelNumero.ForeColor = System.Drawing.SystemColors.Window
+        Me.lblSignoDelNumero.Location = New System.Drawing.Point(175, 182)
+        Me.lblSignoDelNumero.Name = "lblSignoDelNumero"
+        Me.lblSignoDelNumero.Size = New System.Drawing.Size(0, 13)
+        Me.lblSignoDelNumero.TabIndex = 12
         '
-        'lblPosPrimeraA
+        'lblRaiz
         '
-        Me.lblPosPrimeraA.AutoSize = True
-        Me.lblPosPrimeraA.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblPosPrimeraA.Location = New System.Drawing.Point(175, 182)
-        Me.lblPosPrimeraA.Name = "lblPosPrimeraA"
-        Me.lblPosPrimeraA.Size = New System.Drawing.Size(0, 13)
-        Me.lblPosPrimeraA.TabIndex = 12
-        '
-        'lblSegundoAlSextoCaracter
-        '
-        Me.lblSegundoAlSextoCaracter.AutoSize = True
-        Me.lblSegundoAlSextoCaracter.ForeColor = System.Drawing.SystemColors.Window
-        Me.lblSegundoAlSextoCaracter.Location = New System.Drawing.Point(175, 141)
-        Me.lblSegundoAlSextoCaracter.Name = "lblSegundoAlSextoCaracter"
-        Me.lblSegundoAlSextoCaracter.Size = New System.Drawing.Size(0, 13)
-        Me.lblSegundoAlSextoCaracter.TabIndex = 11
+        Me.lblRaiz.AutoSize = True
+        Me.lblRaiz.ForeColor = System.Drawing.SystemColors.Window
+        Me.lblRaiz.Location = New System.Drawing.Point(175, 141)
+        Me.lblRaiz.Name = "lblRaiz"
+        Me.lblRaiz.Size = New System.Drawing.Size(0, 13)
+        Me.lblRaiz.TabIndex = 11
         '
         'lblValorAbsoluto
         '
@@ -144,25 +132,15 @@ Partial Class frmNumeros
         Me.lblParteEntera.Size = New System.Drawing.Size(0, 13)
         Me.lblParteEntera.TabIndex = 8
         '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label9.Location = New System.Drawing.Point(6, 308)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(150, 13)
-        Me.Label9.TabIndex = 7
-        Me.Label9.Text = "Solo la primera en Mayusculas"
-        '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.ForeColor = System.Drawing.SystemColors.Window
         Me.Label8.Location = New System.Drawing.Point(6, 262)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(60, 13)
+        Me.Label8.Size = New System.Drawing.Size(95, 13)
         Me.Label8.TabIndex = 6
-        Me.Label8.Text = "Minusculas"
+        Me.Label8.Text = "Valor Hexadecimal"
         '
         'Label7
         '
@@ -170,9 +148,9 @@ Partial Class frmNumeros
         Me.Label7.ForeColor = System.Drawing.SystemColors.Window
         Me.Label7.Location = New System.Drawing.Point(6, 222)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(63, 13)
+        Me.Label7.Size = New System.Drawing.Size(59, 13)
         Me.Label7.TabIndex = 5
-        Me.Label7.Text = "Mayusculas"
+        Me.Label7.Text = "Valor Octal"
         '
         'Label6
         '
@@ -180,9 +158,9 @@ Partial Class frmNumeros
         Me.Label6.ForeColor = System.Drawing.SystemColors.Window
         Me.Label6.Location = New System.Drawing.Point(6, 182)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(119, 13)
+        Me.Label6.Size = New System.Drawing.Size(89, 13)
         Me.Label6.TabIndex = 4
-        Me.Label6.Text = "Posicion de la 1ª letra A"
+        Me.Label6.Text = "Signo del numero"
         '
         'Label5
         '
@@ -224,14 +202,6 @@ Partial Class frmNumeros
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Parte entera"
         '
-        'txtNumero
-        '
-        Me.txtNumero.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNumero.Location = New System.Drawing.Point(148, 53)
-        Me.txtNumero.Name = "txtNumero"
-        Me.txtNumero.Size = New System.Drawing.Size(307, 24)
-        Me.txtNumero.TabIndex = 10
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -269,13 +239,23 @@ Partial Class frmNumeros
         Me.btnCalcular.Text = "CALCULAR"
         Me.btnCalcular.UseVisualStyleBackColor = True
         '
+        'numNumeros
+        '
+        Me.numNumeros.DecimalPlaces = 2
+        Me.numNumeros.Location = New System.Drawing.Point(157, 58)
+        Me.numNumeros.Maximum = New Decimal(New Integer() {9999, 0, 0, 0})
+        Me.numNumeros.Minimum = New Decimal(New Integer() {9999, 0, 0, -2147483648})
+        Me.numNumeros.Name = "numNumeros"
+        Me.numNumeros.Size = New System.Drawing.Size(120, 20)
+        Me.numNumeros.TabIndex = 12
+        '
         'frmNumeros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(465, 446)
+        Me.ClientSize = New System.Drawing.Size(465, 406)
+        Me.Controls.Add(Me.numNumeros)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.txtNumero)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnNuevo)
@@ -284,21 +264,20 @@ Partial Class frmNumeros
         Me.Text = "frmNumeros"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.numNumeros, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents lblSoloPrimeraMayus As Label
-    Friend WithEvents lblMinusculas As Label
-    Friend WithEvents lblMayusculas As Label
-    Friend WithEvents lblPosPrimeraA As Label
-    Friend WithEvents lblSegundoAlSextoCaracter As Label
+    Friend WithEvents lblValorHexadecimal As Label
+    Friend WithEvents lblValorOctal As Label
+    Friend WithEvents lblSignoDelNumero As Label
+    Friend WithEvents lblRaiz As Label
     Friend WithEvents lblValorAbsoluto As Label
     Friend WithEvents lblParteDecimal As Label
     Friend WithEvents lblParteEntera As Label
-    Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
@@ -306,9 +285,9 @@ Partial Class frmNumeros
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtNumero As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents btnSalir As Button
     Friend WithEvents btnNuevo As Button
     Friend WithEvents btnCalcular As Button
+    Friend WithEvents numNumeros As NumericUpDown
 End Class
